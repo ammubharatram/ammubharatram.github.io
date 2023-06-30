@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bharat Ram Ammu - Head of Data Science</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
+      font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
     .container {
       max-width: 800px;
@@ -37,27 +39,28 @@
     <hr>
     <p class="skills">Highly Skilled in:</p>
     <ul>
-      <li>Python</li>
-      <li>Flask</li>
-      <li>Google Cloud app deployment</li>
-      <li>Vertex AI</li>
-      <li>Kubeflow</li>
-      <li>MLFlow Pipelines</li>
+      {% for skill in skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
     </ul>
     <hr>
-    <p>With over 5 years of experience in data science and financial crime domain.</p>
+    <p>Interests:</p>
+    <ul>
+      {% for interest in interests %}
+        <li>{{ interest }}</li>
+      {% endfor %}
+    </ul>
+    <hr>
+    <p>Education:</p>
+    <ul>
+      {% for edu in education %}
+        <li>{{ edu.degree }} - {{ edu.university }} ({{ edu.year }})</li>
+      {% endfor %}
+    </ul>
     <hr>
     <form action="upload-cv.php" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="cv">Upload CV (PDF):</label>
-        <input type="file" class="form-control-file" id="cv" name="cv" accept="application/pdf">
-      </div>
-      <button type="submit" class="btn btn-primary">Upload</button>
+      <!-- Your existing CV upload form -->
     </form>
   </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
