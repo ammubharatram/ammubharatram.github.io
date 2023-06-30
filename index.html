@@ -1,1 +1,63 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Ram Ammu - Head of Data Science</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .skills {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bharat Ram Ammu</h1>
+    <p>Head of Data Science at Complidata</p>
+    <hr>
+    <p class="skills">Highly Skilled in:</p>
+    <ul>
+      <li>Python</li>
+      <li>Flask</li>
+      <li>Google Cloud app deployment</li>
+      <li>Vertex AI</li>
+      <li>Kubeflow</li>
+      <li>MLFlow Pipelines</li>
+    </ul>
+    <hr>
+    <p>With over 5 years of experience in data science and financial crime domain.</p>
+    <hr>
+    <form action="upload-cv.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="cv">Upload CV (PDF):</label>
+        <input type="file" class="form-control-file" id="cv" name="cv" accept="application/pdf">
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
