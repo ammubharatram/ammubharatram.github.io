@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bharat Ram Ammu - Head of Data Science</title>
+  <title>Bharat Ram Ammu - Head of Data Science at Complidata Belgium</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -30,10 +30,24 @@
       font-weight: bold;
       margin-bottom: 20px;
     }
+    .profile-img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
   <div class="container">
+    <img src="{{ url_for('static', filename='Complidata pic color.jpg') }}" alt="Profile Picture" class="profile-img">
     <h1>Bharat Ram Ammu</h1>
     <p>Head of Data Science at Complidata</p>
     <hr>
@@ -58,9 +72,15 @@
       {% endfor %}
     </ul>
     <hr>
-    <form action="upload-cv.php" method="post" enctype="multipart/form-data">
-      <!-- Your existing CV upload form -->
+    <form action="{{ url_for('view_pdf') }}" method="post">
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-file-pdf"></i> View CV
+      </button>
     </form>
+    
+    
+    </form>
+  </div>
   </div>
 </body>
 </html>

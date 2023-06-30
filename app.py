@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, send_from_directory
 
 app = Flask(__name__)
 
@@ -37,9 +37,10 @@ def index():
 
     return render_template('index.html', skills=skills, interests=interests, education=education)
 
-@app.route('/cv')
-def cv():
-    return send_file('Bharat Ram Ammu CV Complidata latest.pdf', as_attachment=True)
+@app.route('/view-pdf', methods=['POST'])
+def view_pdf():
+    # Assuming your PDF file is named "cv.pdf" in the same directory
+    return send_from_directory('.', 'Bharat Ram Ammu CV Complidata latest.pdf', as_attachment=False)
 
 if __name__ == '__main__':
     app.run()
