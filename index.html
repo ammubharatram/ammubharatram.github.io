@@ -4,128 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bharat Ram Ammu</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      padding: 2rem;
+      background-color: #f8f9fa;
     }
-    .profile-img {
-      max-width: 150px;
+    .hero {
+      padding: 4rem 1rem;
+      background: linear-gradient(to right, #004085, #0062cc);
+      color: white;
+      text-align: center;
+    }
+    .hero img {
+      max-width: 140px;
       border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid white;
     }
-    h1, h2 {
-      color: #004085;
+    .section {
+      padding: 3rem 1rem;
     }
-    .section-title {
-      border-bottom: 2px solid #004085;
-      padding-bottom: 0.25rem;
-      margin-top: 2rem;
+    .btn-custom {
+      background-color: #004085;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #002752;
+    }
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="container bg-white p-4 rounded shadow-sm">
-    <div class="text-center mb-4">
-      <img src="profile_pic_professional.png" alt="Bharat Ram" class="profile-img mb-3" />
-      <h1>Bharat Ram Ammu</h1>
-      <p class="text-muted">Analytics Manager at Interactive Brokers UK</p>
-      <p>
-        <a href="mailto:ammubharatramuk@gmail.com">ammubharatramuk@gmail.com</a> |
-        <a href="https://linkedin.com/in/bharatramammu" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/ammubharatram" target="_blank">GitHub</a>
-        <p><a href="CV_BRA.pdf" target="_blank">Download My Resume</a></p>
 
-      </p>
-      <p><strong>Nationality:</strong> Belgian | <strong>Location:</strong> London, UK</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profile_pic_professional.png" alt="Bharat Ram Ammu" />
+    <h1 class="display-5 fw-bold">Bharat Ram Ammu</h1>
+    <p class="lead">Analytics Manager · AI in Finance · Data Science Leader</p>
+    <p>
+      <a href="mailto:ammubharatramuk@gmail.com" class="text-white">ammubharatramuk@gmail.com</a> |
+      <a href="https://linkedin.com/in/bharatramammu" target="_blank" class="text-white">LinkedIn</a> |
+      <a href="https://github.com/ammubharatram" target="_blank" class="text-white">GitHub</a>
+    </p>
+    <a href="CV_BRA.pdf" class="btn btn-outline-light mt-2" target="_blank">Download My CV</a>
+  </section>
+
+  <!-- About -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="mb-4 text-primary">About Me</h2>
+      <p>I’m a seasoned data science leader with over 7 years of experience building AI solutions that reduce financial crime risk, cut false positives, and deliver measurable business value. I’ve led ML product development, model governance, and AI platform strategy across Belgium and the UK.</p>
     </div>
+  </section>
 
-    <div>
-      <h2 class="section-title">Objective</h2>
-      <p>Data science leader with 7+ years of experience in the deployment of AI solutions, reducing operational risks, and delivering measurable business impact through scalable machine learning models.</p>
-    </div>
-
-    <div>
-      <h2 class="section-title">Skills</h2>
-      <ul class="row">
-        <li class="col-md-4">Agile Project Management</li>
-        <li class="col-md-4">Machine Learning</li>
-        <li class="col-md-4">Cloud Platforms (AWS, GCP, Azure)</li>
-        <li class="col-md-4">Python, Django, Flask</li>
-        <li class="col-md-4">Docker, Kubernetes, MLFlow, Kubeflow</li>
-        <li class="col-md-4">SQL, Neo4j</li>
-        <li class="col-md-4">SAS, Bash, Selenium</li>
-        <li class="col-md-4">GitHub, Bitbucket, Jira, Asana</li>
-        <li class="col-md-4">Agile (Scrum, Kanban)</li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="section-title">Experience</h2>
-      <h5>Model Governance and Analytics Manager</h5>
-      <p><em>Interactive Brokers, London | Feb 2025 – Present</em></p>
+  <!-- Projects -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-primary">Key Projects</h2>
       <ul>
-        <li>Managing model governance and tuning for AML, Trade Surveillance, and Sanctions models.</li>
-        <li>Conducting financial crime data analysis and model validation using Python and SQL.</li>
-        <li>Optimizing alert thresholds to balance risk and false positives.</li>
-      </ul>
-
-      <h5>Head of Data Science</h5>
-      <p><em>Complidata, Belgium | Apr 2023 – Feb 2025</em></p>
-      <ul>
-        <li>Led FCRR platform development, improving model efficiency by 15% and reducing false positives by 30%+.</li>
-        <li>Managed team and strategy, improving productivity by 20%.</li>
-      </ul>
-
-      <h5>Data Science Consultant</h5>
-      <p><em>Complidata, Belgium | Apr 2022 – Apr 2023</em></p>
-      <ul>
-        <li>Optimized ML models, reduced review time by 15%.</li>
-        <li>Lowered false positives in AML detection by 10%.</li>
-      </ul>
-
-      <h5>Senior Data Scientist</h5>
-      <p><em>Complidata, Belgium | Jan 2019 – Apr 2022</em></p>
-      <ul>
-        <li>Used LIME/SHAP to reduce AML false positives by 30–70%.</li>
-        <li>Created narrative generation tools, improved trust by 25%.</li>
-      </ul>
-
-      <h5>Junior Data Scientist</h5>
-      <p><em>Complidata, Belgium | Apr 2017 – Dec 2018</em></p>
-      <ul>
-        <li>Built interpretable ML models to optimize AML outcomes.</li>
-        <li>Improved CDD workflow using Selenium automation.</li>
+        <li><strong>Sanctions Screening Optimization:</strong> Belfius, BNP Paribas</li>
+        <li><strong>Transaction Monitoring Optimization:</strong> AIB, Raiffeisen, Commerzbank</li>
+        <li><strong>OSINT Automation for KYC:</strong> DLL Netherlands</li>
       </ul>
     </div>
+  </section>
 
-    <div>
-      <h2 class="section-title">Key Projects</h2>
-      <ul>
-        <li><strong>Transaction List Sanctions Screening Optimization:</strong> Belfius, BNP Paribas</li>
-        <li><strong>Transaction Monitoring Optimization:</strong> Allied Irish Bank, Raiffeisen, Commerz</li>
-        <li><strong>Name Screening Optimization:</strong> Belfius, GPM, Klaesia</li>
-        <li><strong>OSINT Platform:</strong> DLL Netherlands</li>
-      </ul>
+  <!-- Contact -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="mb-4 text-primary">Get in Touch</h2>
+      <p>Currently based in London, UK · Belgian National · Open to AI-driven opportunities in finance, risk, or strategy roles.</p>
+      <a href="mailto:ammubharatramuk@gmail.com" class="btn btn-custom mt-2">Send Me an Email</a>
     </div>
+  </section>
 
-    <div>
-      <h2 class="section-title">Education</h2>
-      <p><strong>Master of Science in Statistics</strong>, KU Leuven, Belgium (2016–2018)</p>
-      <p><strong>B.Tech in Metallurgical & Materials Engineering</strong>, NIT Warangal, India (2010–2014)</p>
-    </div>
+  <footer class="text-center py-4 bg-light text-muted">
+    &copy; 2025 Bharat Ram Ammu
+  </footer>
 
-    <div>
-      <h2 class="section-title">Languages</h2>
-      <ul class="row">
-        <li class="col-md-4"><strong>English:</strong> C2</li>
-        <li class="col-md-4"><strong>Dutch:</strong> A2</li>
-        <li class="col-md-4"><strong>French:</strong> A1</li>
-        <li class="col-md-4"><strong>Hindi:</strong> C2</li>
-        <li class="col-md-4"><strong>Telugu:</strong> C2 (Native)</li>
-      </ul>
-    </div>
-  </div>
 </body>
-</html> 
+</html>
