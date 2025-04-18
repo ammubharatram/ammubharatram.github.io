@@ -25,7 +25,7 @@
       color: var(--dark-text);
     }
 
-    .dark-mode .bg-white {
+    .dark-mode .bg-white, .dark-mode .bg-light {
       background-color: #1e1e1e !important;
     }
 
@@ -41,6 +41,7 @@
       border-radius: 50%;
       margin-bottom: 1rem;
       border: 3px solid white;
+      cursor: pointer;
     }
 
     .section {
@@ -61,22 +62,27 @@
       margin: 0 10px;
     }
 
-    .navbar-dark-mode {
-      background-color: #1c1c1c;
-    }
-
-    footer {
-      background: #f1f1f1;
-    }
-
-    .dark-mode footer {
-      background: #222;
-    }
-
     .medium-icon {
       width: 22px;
       vertical-align: text-bottom;
       margin-right: 5px;
+    }
+
+    .medium-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: white;
+    }
+
+    .dark-mode .medium-card {
+      background-color: #2a2a2a;
+      border-color: #444;
+    }
+
+    .modal-img {
+      max-width: 100%;
     }
   </style>
 </head>
@@ -89,6 +95,7 @@
       <div>
         <a class="nav-link d-inline" href="#about">About</a>
         <a class="nav-link d-inline" href="#projects">Projects</a>
+        <a class="nav-link d-inline" href="#articles">Articles</a>
         <a class="nav-link d-inline" href="#contact">Contact</a>
         <button class="btn btn-sm btn-light ms-2" onclick="toggleDarkMode()">🌙</button>
       </div>
@@ -97,7 +104,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="profile_pic_professional.png" alt="Bharat Ram Ammu" />
+    <img src="profile_pic_professional.png" alt="Bharat Ram Ammu" data-bs-toggle="modal" data-bs-target="#profileModal" />
     <h1 class="display-5 fw-bold">Bharat Ram Ammu</h1>
     <p class="lead">Analytics Manager · AI in Finance · Data Science Leader</p>
     <p>
@@ -105,8 +112,7 @@
       <a href="https://linkedin.com/in/bharatramammu" target="_blank" class="text-white">LinkedIn</a> |
       <a href="https://github.com/ammubharatram" target="_blank" class="text-white">GitHub</a>
     </p>
-    <a href="CV_BRA.pdf" class="btn btn-outline-light mt-2" target="_blank">Download My CV</a>
-    <br />
+    <a href="CV_BRA.pdf" class="btn btn-outline-light mt-2" target="_blank">Download My CV</a><br />
     <a href="https://medium.com/@ammubharatram" class="text-white mt-3 d-inline-block" target="_blank">
       <img class="medium-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium icon" />
       Read My Articles on Medium
@@ -133,8 +139,18 @@
     </div>
   </section>
 
+  <!-- Articles -->
+  <section id="articles" class="section bg-white">
+    <div class="container">
+      <h2 class="mb-4 text-primary">Latest Articles on Medium</h2>
+      <div id="medium-feed">
+        <p>Loading articles...</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="section bg-white">
+  <section id="contact" class="section bg-light">
     <div class="container">
       <h2 class="mb-4 text-primary">Get in Touch</h2>
       <p>Currently based in London, UK · Belgian National · Open to AI-driven opportunities in finance, risk, or strategy roles.</p>
@@ -147,12 +163,52 @@
     &copy; 2025 Bharat Ram Ammu
   </footer>
 
+  <!-- Profile Image Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <img src="profile_pic_professional.png" class="modal-img mx-auto d-block" alt="Profile Full View" />
+      </div>
+    </div>
+  </div>
+
   <!-- Dark mode script -->
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
   </script>
+
+  <!-- Medium Articles Loader -->
+  <script>
+    async function loadMediumArticles() {
+      const container = document.getElementById('medium-feed');
+      try {
+        const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ammubharatram');
+        const data = await res.json();
+        container.innerHTML = '';
+        data.items.slice(0, 3).forEach(post => {
+          const el = document.createElement('div');
+          el.className = 'medium-card';
+          el.innerHTML = `<h5><a href="${post.link}" target="_blank">${post.title}</a></h5>
+                          <p>${post.description.slice(0, 150)}...</p>`;
+          container.appendChild(el);
+        });
+      } catch (e) {
+        container.innerHTML = "<p>Could not load Medium articles.</p>";
+      }
+    }
+    loadMediumArticles();
+  </script>
+
+  <!-- Optional: Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script> -->
 
 </body>
 </html>
