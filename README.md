@@ -1,20 +1,23 @@
-# Personal Website:
-https://ammubharatram.github.io/
+# Personal Website
 
-This repository contains the source code for my personal website. The website serves as a platform to showcase my professional profile and provides access to my CV.
+**🔗 Live site:** [https://ammubharatram.github.io](https://ammubharatram.github.io)
 
-## Features
+This repository contains the source code for my personal website, built to share my professional background, key projects, and resume. It’s a simple, static site hosted on GitHub Pages.
 
-- Display professional profile information
-- View and download my CV
+## ✨ Features
 
-## Technologies Used
+- Professional overview (current role, experience, and domains)
+- Downloadable resume
+- Featured projects in financial crime and compliance
+- Links to Medium, LinkedIn, GitHub
 
-- Flask: A Python web framework for building the website backend
-- HTML: Markup language for structuring the web pages
-- CSS: Stylesheet language for designing the website layout and appearance
-- Bootstrap: CSS framework for responsive and visually appealing design
-## Contact
+## 🛠️ Built With
 
-For any inquiries or feedback, feel free to reach out to me at ammubharatram@gmail.com.
+- HTML5 & CSS3
+- Bootstrap 5 (for responsive layout and styling)
+- JavaScript (for interactivity and article loading)
+- GitHub Pages (for free static hosting)
 
+## 📬 Contact
+
+Feel free to connect via [ammubharatramuk@gmail.com](mailto:ammubharatramuk@gmail.com)
