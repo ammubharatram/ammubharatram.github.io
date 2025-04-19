@@ -108,12 +108,19 @@
   <h1 class="display-5 fw-bold">Bharat Ram Ammu</h1>
   <p class="lead">Analytics Manager · AI in Finance · Data Science Leader</p>
   <p>
-    <a href="https://linkedin.com/in/bharatramammu" target="_blank" class="text-white">LinkedIn</a> |
-    <a href="https://github.com/ammubharatram" target="_blank" class="text-white">GitHub</a> |
-    <a href="https://medium.com/@ammubharatram" target="_blank" class="text-white">Medium</a>
+    <a href="https://linkedin.com/in/bharatramammu" target="_blank" class="text-white me-2" data-bs-toggle="tooltip" title="LinkedIn">
+      LinkedIn
+    </a> |
+    <a href="https://github.com/ammubharatram" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="GitHub">
+      GitHub
+    </a> |
+    <a href="https://medium.com/@ammubharatram" target="_blank" class="text-white ms-2" data-bs-toggle="tooltip" title="Medium Articles">
+      Medium
+    </a>
   </p>
   <a href="CV_BRA.pdf" class="btn btn-outline-light mt-2" target="_blank">Download My CV</a>
 </section>
+
 
 
 
@@ -200,7 +207,21 @@
       }
     }
     loadMediumArticles();
+  
   </script>
+  <script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
+  // Enable tooltips
+  document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  });
+</script>
 
   <!-- Optional: Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
